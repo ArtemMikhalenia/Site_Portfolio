@@ -145,6 +145,10 @@ body {
 		margin: 0px 30px 0px 0px;
 	}
 
+	.burger-header {
+		margin: 0px 0px 0px 0px;
+	}
+
 	.header__burger:before,
 	.header__burger:after {
 		content: '';
@@ -623,6 +627,34 @@ body {
 
 //<PORTFOLIO>===================================================================================================
 
+.container-portfolio {
+	background-color: rgb(255, 255, 255);
+	padding: 0px 30px 0px 30px;
+
+	@media (max-width: $md3+px) {
+		padding: 0px 20px 0px 20px;
+	}
+
+	@media (max-width: $md4+px) {
+		padding: 0px 5px 0px 5px;
+	}
+
+}
+
+.content-portfolio {
+	padding: 112.93px 0px 0px 0px;
+	max-width: 943.461px;
+	margin: 0 auto;
+
+	@media (max-width: $md3+px) {
+		padding: 100px 0px 0px 0px;
+	}
+
+	@media (max-width: $md4+px) {
+		padding: 80px 0px 0px 0px;
+	}
+}
+
 .portfolio {
 	&__container {
 		padding: 0px 30px 0px 30px;
@@ -742,6 +774,10 @@ body {
 			margin: 0px 0px 40px 0px;
 		}
 	}
+}
+
+.last-site {
+	margin: 0px 0px 0px 0px;
 }
 
 .portfolio__btn {
