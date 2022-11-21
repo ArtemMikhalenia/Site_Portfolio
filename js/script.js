@@ -9,7 +9,17 @@ if (iconMenu) {
    });
 }
 
-console.log(menuBody);
+let headerLink = document.querySelectorAll(".menu-header__link");
+
+if (headerLink) {
+   headerLink.forEach(link => {
+      link.addEventListener("click", function () {
+         menuBody.classList.remove("active");
+         iconMenu.classList.remove("active");
+         body.classList.remove("lock");
+      })
+   });
+}
 
 //Скрипт для анимации сайта
 const animItems = document.querySelectorAll('._anim-items');
@@ -48,3 +58,14 @@ if (animItems.length > 0) {
       animOnScroll();
    }, 100);
 }
+
+//скролл вверх при клике на кнопку
+
+const topButton = document.querySelector('.topbutton');
+topButton.addEventListener("click", scrollToTop);
+function scrollToTop() {
+   window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+   });
+};
