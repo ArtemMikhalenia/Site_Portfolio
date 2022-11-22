@@ -182,7 +182,7 @@
 					<div class="contacts__text _anim-items _no-anim">Want to know more or just chat?
 						You are welcome!</div>
 					<div class="button__contacts _anim-items _no-anim">
-						<button class="contacts__button">Send message</button>
+						<a href="#popup" class="contacts__button popup-link">Send message</a>
 					</div>
 					<div class="contacts__social _anim-items _no-anim">
 						<div class="contacts__social__items">
@@ -210,6 +210,31 @@
 			<button class="topbtn _anim-items _no-anim">
 				To the top
 			</button>
+		</div>
+		<div id="popup" class="popup">
+			<!--<a href="#contacts" class="popup__area"></a>-->
+			<div class="popup__body">
+				<div class="popup__content">
+					<a href="#contacts" class="popup__close close-popup">X</a>
+					<div class="popup__title">Message</div>
+					<form class="popup__form form-popup">
+						<div class="form-popup__name">
+							<input type="text" autocomplete='off' placeholder="Name" type='text' name='name'
+								class='name__input'>
+						</div>
+						<div class="form-popup__email">
+							<input type="email" placeholder="Email" name="Email" id="email" class="email__input">
+						</div>
+						<div class="form-popup__comment">
+							<textarea name="comment" maxlength="200" placeholder="Comment" id="comment"
+								class="comment__input"></textarea>
+						</div>
+						<div class="form-popup__btn">
+							<button type="submit" name="submit__btn" value="Send" class="submit__button">Send</button>
+						</div>
+					</form>
+				</div>
+			</div>
 		</div>
 	</div>
 	<script src="js/script.js"></script>

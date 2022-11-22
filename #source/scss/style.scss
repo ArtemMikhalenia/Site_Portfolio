@@ -904,9 +904,12 @@ body {
 		border: 1px solid black;
 		padding: 13px 30px;
 		border-radius: 25px;
-		margin-bottom: 85.78px;
 		background-color: #000;
 		color: #ffffff;
+
+		a {
+			margin-bottom: 85.78px;
+		}
 
 		&:hover {
 			background-color: rgba(255, 255, 255, 0.845);
@@ -955,6 +958,7 @@ body {
 	transform: translate(0px, 120%);
 	opacity: 0;
 	transition: all 1s ease 0.6s;
+	margin: 30px 0px 85.78px 0px;
 
 	&.active {
 		transform: translate(0px, 0px);
@@ -1011,3 +1015,157 @@ body {
 
 
 //</TOPBUTTON>===================================================================================================
+//<POPUP>===================================================================================================
+
+.popup {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(7, 7, 7, 0.7);
+	top: 0;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+	overflow-y: auto;
+	overflow-x: hidden;
+	transition: all 0.8s ease 0s;
+
+	&__body {
+		min-height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 30px 10px;
+	}
+
+	&__content {
+		position: relative;
+		background-color: rgb(0, 0, 0);
+		color: rgb(255, 255, 255);
+		max-width: 500px;
+		padding: 20px;
+		border-radius: 5px;
+		transition: all 0.8s ease 0s;
+		opacity: 0;
+		transform: perspective(300px) translate(0px, -100%) rotateX(45deg);
+	}
+
+	&__close {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		color: #ffffff;
+	}
+
+	&__title {
+		font-size: 30px;
+		margin: 0px 0px 20px 0px;
+	}
+
+	&__text {
+		font-size: 20px;
+	}
+}
+
+.popup.open {
+	opacity: 1;
+	visibility: visible;
+}
+
+.popup.open .popup__content {
+	transform: perspective(300px) translate(0px, 0%) rotateX(0deg);
+	opacity: 1;
+}
+
+.popup__area {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.popup {
+
+	&__area {}
+
+	&__body {}
+
+	&__content {}
+
+	&__close {}
+
+	&__title {}
+
+	&__form {}
+}
+
+.form-popup {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+
+	&__name {
+		margin: 0px 0px 10px 0px;
+	}
+
+	&__email {
+		margin: 0px 0px 10px 0px;
+	}
+
+	&__comment {
+		margin: 0px 0px 10px 0px;
+	}
+
+	&__btn {
+		padding: 0px 30px;
+	}
+}
+
+.name {
+
+	&__input {
+		border-radius: 5px;
+		padding: 10px 10px;
+	}
+}
+
+.email {
+
+	&__input {
+		border-radius: 5px;
+		padding: 10px 10px;
+	}
+}
+
+.comment {
+
+	&__input {
+		width: 175px;
+		height: 130px;
+		resize: none;
+		border-radius: 5px;
+		padding: 10px 10px;
+	}
+}
+
+.submit {
+
+	&__button {
+		padding: 5px 20px;
+		border-radius: 25px;
+		border: 1px solid rgba(255, 255, 255, 1);
+		background-color: transparent;
+		color: rgba(255, 255, 255, 1);
+
+		&:hover {
+			transition: all 0.5s ease 0s;
+			background-color: rgba(255, 255, 255, 1);
+			color: rgba(0, 0, 0, 1);
+		}
+	}
+}
+
+
+//</POPUP>===================================================================================================
