@@ -1017,7 +1017,7 @@ body.lock {
           transform: scale(1);
   opacity: 1;
 }
-.contacts__social__items {
+.contacts__social_items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1028,6 +1028,9 @@ body.lock {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 45.98px;
+}
+.contacts__social_items svg {
+  width: 40px;
 }
 .contacts__social__text {
   margin: 0 auto;
@@ -1051,10 +1054,6 @@ body.lock {
   -webkit-transform: translate(0px, 0px);
           transform: translate(0px, 0px);
   opacity: 1;
-}
-
-.vkicon img {
-  width: 40px;
 }
 
 .social:hover {
