@@ -1,3 +1,4 @@
+//BURGER
 let iconMenu = document.querySelector(".header__burger");
 let body = document.querySelector("body");
 let menuBody = document.querySelector(".menu-header__menu");
@@ -23,13 +24,21 @@ if (headerLink) {
 
 //скролл вверх при клике на кнопку
 
-const topButton = document.querySelector('.topbutton');
-topButton.addEventListener("click", scrollToTop);
+const topButton = document.querySelectorAll('.topbutton');
+
 function scrollToTop() {
    window.scrollTo({
       top: 0,
       behavior: "smooth"
    });
+};
+
+if (topButton.length > 0) {
+   for (let index = 0; index < topButton.length; index++) {
+      topButton.forEach(item => {
+         item.addEventListener("click", scrollToTop);
+      });
+   }
 };
 
 //popup=========================================================
@@ -132,31 +141,6 @@ document.addEventListener('keydown', function (e) {
       popupClose(popupActive);
    }
 });
-
-(function () {
-   // проверяем поддержку
-   if (!Element.prototype.closest) {
-      // реализуем
-      Element.prototype.closest = function (css) {
-         var node = this;
-         while (node) {
-            if (node.matches(css)) return node;
-            else node = node.parentElement;
-         }
-         return null;
-      };
-   }
-})();
-(function () {
-   // проверяем поддержку
-   if (!Element.prototype.matches) {
-      // определяем свойство
-      Element.prototype.matches = Element.prototype.matchesSelector ||
-         Element.prototype.webkitMatchesSelector ||
-         Element.prototype.mozMatchesSelector ||
-         Element.prototype.msMatchesSelector;
-   }
-})();
 
 //WOW
 
