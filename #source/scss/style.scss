@@ -370,7 +370,7 @@ body {
 		}
 	}
 
-	&__image2 {
+	&__image-mobile {
 		display: none;
 
 		img {
@@ -451,11 +451,6 @@ body {
 		text-align: center;
 		max-width: 485.34px;
 		margin: 0 auto;
-		margin-bottom: 107px;
-
-		@media (max-width: $md2+px) {
-			margin-bottom: 30px;
-		}
 	}
 
 	&__title {

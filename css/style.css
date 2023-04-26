@@ -415,18 +415,18 @@ body.lock {
     display: none;
   }
 }
-.mainblock__image2 {
+.mainblock__image-mobile {
   display: none;
 }
-.mainblock__image2 img {
+.mainblock__image-mobile img {
   width: 100%;
 }
 @media (max-width: 479.98px) {
-  .mainblock__image2 {
+  .mainblock__image-mobile {
     display: block;
     padding: 0px 30px;
   }
-  .mainblock__image2 img {
+  .mainblock__image-mobile img {
     width: 100%;
   }
 }
@@ -495,12 +495,6 @@ body.lock {
   text-align: center;
   max-width: 485.34px;
   margin: 0 auto;
-  margin-bottom: 107px;
-}
-@media (max-width: 991.98px) {
-  .about__content {
-    margin-bottom: 30px;
-  }
 }
 .about__title {
   margin-bottom: 17.69px;
