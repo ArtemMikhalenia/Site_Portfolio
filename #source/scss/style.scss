@@ -351,15 +351,6 @@ body {
 		justify-content: space-between;
 		margin-bottom: 50px;
 
-		transform: translate(0px, 120%);
-		opacity: 0;
-		transition: all 1s ease 0s;
-
-		&.active {
-			transform: translate(0px, 0px);
-			opacity: 1;
-		}
-
 		@media (max-width: $md4+px) {
 			padding: 0px 30px;
 			flex-direction: column;
@@ -369,15 +360,6 @@ body {
 	}
 
 	&__image {
-
-		transform: translate(120%, 0px);
-		opacity: 0;
-		transition: all 3s ease 0s;
-
-		&.active {
-			transform: translate(0px, 0px);
-			opacity: 1;
-		}
 
 		img {
 			width: 100%;
@@ -390,15 +372,6 @@ body {
 
 	&__image2 {
 		display: none;
-
-		transform: translate(120%, 0px);
-		opacity: 0;
-		transition: all 3s ease 0s;
-
-		&.active {
-			transform: translate(0px, 0px);
-			opacity: 1;
-		}
 
 		img {
 			width: 100%;
@@ -480,15 +453,6 @@ body {
 		margin: 0 auto;
 		margin-bottom: 107px;
 
-		transform: translate(-120%, 0px);
-		opacity: 0;
-		transition: all 2s ease 0s;
-
-		&.active {
-			transform: translate(0px, 0px);
-			opacity: 1;
-		}
-
 		@media (max-width: $md2+px) {
 			margin-bottom: 30px;
 		}
@@ -547,15 +511,6 @@ body {
 	&__title {
 		margin-bottom: 69.1px;
 
-		transform: translate(0px, 120%);
-		opacity: 0;
-		transition: all 2s ease 0s;
-
-		&.active {
-			transform: translate(0px, 0px);
-			opacity: 1;
-		}
-
 		@media (max-width: $md4+px) {
 			margin-bottom: 50px;
 		}
@@ -567,15 +522,6 @@ body {
 		line-height: 22px;
 		text-align: center;
 		margin-bottom: 83.49px;
-
-		transform: translate(120%, 0px);
-		opacity: 0;
-		transition: all 2s ease 0s;
-
-		&.active {
-			transform: translate(0px, 0px);
-			opacity: 1;
-		}
 
 		@media (max-width: $md4+px) {
 			margin-bottom: 70px;
@@ -608,15 +554,6 @@ body {
 	justify-content: space-between;
 	flex-direction: column;
 
-	transform: scale(0);
-	opacity: 0;
-	transition: all 1s ease 0s;
-
-	&.active {
-		transform: scale(1);
-		opacity: 1;
-	}
-
 	&__image {
 		margin-bottom: 24.21px;
 
@@ -641,8 +578,6 @@ body {
 		align-items: center;
 		justify-content: space-between;
 	}
-
-	&__star {}
 }
 
 //<PORTFOLIO>===================================================================================================
@@ -724,15 +659,6 @@ body {
 			color: #000;
 			text-decoration: underline;
 		}
-
-		transform: scale(0);
-		opacity: 0;
-		transition: all 1s ease 0s;
-
-		&.active {
-			transform: scale(1);
-			opacity: 1;
-		}
 	}
 
 	&__content {
@@ -752,17 +678,6 @@ body {
 		}
 	}
 
-	&__title {
-		transform: scale(0);
-		opacity: 0;
-		transition: all 1s ease 0s;
-
-		&.active {
-			transform: scale(1);
-			opacity: 1;
-		}
-	}
-
 	.portfolio-title {
 		width: 100%;
 		justify-content: center;
@@ -778,14 +693,6 @@ body {
 	&__site {
 		display: flex;
 		flex-direction: column;
-		transform: scale(0);
-		opacity: 0;
-		transition: all 1s ease 0s;
-
-		&.active {
-			transform: scale(1);
-			opacity: 1;
-		}
 
 		@media (max-width: $md3+px) {
 			margin-bottom: 70px;
@@ -881,15 +788,6 @@ body {
 
 	&__title {
 		margin-bottom: 20.03px;
-
-		transform: translate(0px, 120%);
-		opacity: 0;
-		transition: all 1s ease 0s;
-
-		&.active {
-			transform: translate(0px, 0px);
-			opacity: 1;
-		}
 	}
 
 	&__text {
@@ -897,15 +795,6 @@ body {
 		text-align: center;
 		max-width: 275.14px;
 		margin-bottom: 29.6px;
-
-		transform: translate(0px, 120%);
-		opacity: 0;
-		transition: all 1s ease 0.3s;
-
-		&.active {
-			transform: translate(0px, 0px);
-			opacity: 1;
-		}
 	}
 
 	&__button {
@@ -934,15 +823,6 @@ body {
 
 	&__social {
 
-		transform: scale(0);
-		opacity: 0;
-		transition: all 1s ease 0.8s;
-
-		&.active {
-			transform: scale(1);
-			opacity: 1;
-		}
-
 		&_items {
 			display: flex;
 			align-items: center;
@@ -967,15 +847,7 @@ body {
 }
 
 .button__contacts {
-	transform: translate(0px, 120%);
-	opacity: 0;
-	transition: all 1s ease 0.6s;
 	margin: 30px 0px 85.78px 0px;
-
-	&.active {
-		transform: translate(0px, 0px);
-		opacity: 1;
-	}
 }
 
 .social {
@@ -1007,15 +879,6 @@ body {
 		border: 1px solid black;
 		color: rgb(0, 0, 0);
 		transition: 0.8s;
-	}
-
-	transform: scale(0);
-	opacity: 0;
-	transition: all 1s ease 0.8s;
-
-	&.active {
-		transform: scale(1);
-		opacity: 1;
 	}
 }
 
@@ -1157,6 +1020,5 @@ body {
 		}
 	}
 }
-
 
 //</POPUP>===================================================================================================
