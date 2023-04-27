@@ -749,6 +749,29 @@ body.lock {
           transform: scale(1.02);
 }
 
+.portfolio-page__sites {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+  row-gap: 20px;
+}
+@media (max-width: 767.98px) {
+  .portfolio-page__sites {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 479.98px) {
+  .portfolio-page__sites {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+
 .portfolio__btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1068,4 +1091,6 @@ body.lock {
 }
 .top-btn:hover {
   background-color: rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.7);
+          box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.7);
 }
