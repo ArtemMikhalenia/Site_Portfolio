@@ -1081,16 +1081,29 @@ body.lock {
   bottom: 0;
   right: 0;
   margin: 0px 40px 40px 0px;
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
   font-size: 20px;
   border-radius: 50%;
-  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.8);
   color: rgb(255, 255, 255);
-  -webkit-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
   cursor: pointer;
 }
 .top-btn:hover {
   background-color: rgba(0, 0, 0, 0.7);
   -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.7);
           box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.7);
+}
+.top-btn.visible {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+@media (max-width: 767.98px) {
+  .top-btn {
+    margin: 0px 15px 15px 0px;
+  }
 }

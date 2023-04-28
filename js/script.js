@@ -41,6 +41,24 @@ if (topButton.length > 0) {
    }
 };
 
+//=============================================================
+const showBtn = document.querySelector('.top-btn');
+
+window.addEventListener('scroll', function () {
+
+   const block = document.querySelector('.wrapper');
+   const getItemTopCoord = block.getBoundingClientRect().top;
+
+   let blockCoords = -200;
+
+   if (getItemTopCoord < blockCoords) {
+      showBtn.classList.add('visible');
+   } else {
+      showBtn.classList.remove('visible');
+   }
+});
+
+
 //popup=========================================================
 
 const popupLinks = document.querySelectorAll('.popup-link');                //сюда получаем объект, при нажатии на который открывается попап
