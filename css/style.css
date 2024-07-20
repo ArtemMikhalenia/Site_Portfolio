@@ -285,36 +285,6 @@ body.lock {
   }
 }
 
-.text-header__language {
-  display: none;
-}
-@media (max-width: 479.98px) {
-  .text-header__language {
-    position: absolute;
-    right: 28px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end;
-    width: 100%;
-    display: flex;
-    -webkit-writing-mode: vertical-rl;
-        -ms-writing-mode: tb-rl;
-            writing-mode: vertical-rl;
-    font-family: Gilroy-Bold;
-    font-size: 28px;
-    margin: 50px 13px 0px 0px;
-  }
-  .text-header__language a {
-    color: rgb(130, 130, 130);
-  }
-  .text-header__language a.active {
-    color: #000;
-  }
-}
-
 .menu-header__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -444,42 +414,14 @@ body.lock {
   font-family: Gilroy-Medium;
   font-size: 18px;
 }
-.text-mainblock__language {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  max-height: 65px;
-  height: 100%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-writing-mode: vertical-lr;
-      -ms-writing-mode: tb-lr;
-          writing-mode: vertical-lr;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-  font-family: Gilroy-Bold;
-  font-size: 16px;
-}
-.text-mainblock__language a {
-  color: rgb(130, 130, 130);
-}
-.text-mainblock__language a.active {
-  color: #000;
-}
-@media (max-width: 479.98px) {
-  .text-mainblock__language {
-    display: none;
-  }
-}
 
 .about__container {
-  padding: 120.25px 0px 107px 0px;
+  padding: 60px 0px;
   background-color: rgb(246, 246, 246);
 }
 @media (max-width: 991.98px) {
   .about__container {
-    padding: 81px 10px 76px 10px;
+    padding: 60px 10px;
   }
 }
 .about__content {
@@ -495,16 +437,12 @@ body.lock {
   font-size: 18px;
   line-height: 22px;
 }
-.about__text P {
-  padding: 0px 0px 40px 0px;
+.about__text p {
+  padding: 0px 0px 20px;
 }
-@media (max-width: 479.98px) {
-  .about__text P {
-    padding: 0px 0px 20px 0px;
-  }
-}
-.about__text P:last-child {
-  padding: 0px 0px 0px 0px;
+
+.about__text p:last-child {
+  padding: 0px;
 }
 
 .title {
@@ -518,18 +456,12 @@ body.lock {
 .skills__container {
   max-width: 943.461px;
   margin: 0 auto;
-  padding: 0px 10px 0px 10px;
+  padding: 0px 10px;
 }
 .skills__content {
-  padding-top: 91px;
-  padding-bottom: 110.06px;
+  padding: 60px 0px;
 }
-@media (max-width: 479.98px) {
-  .skills__content {
-    padding-top: 80px;
-    padding-bottom: 100px;
-  }
-}
+
 .skills__title {
   margin-bottom: 69.1px;
 }
@@ -556,7 +488,7 @@ body.lock {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 70px 1fr 70px 1fr 70px 1fr;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 70px;
 }
 @media (max-width: 767.98px) {
@@ -591,11 +523,10 @@ body.lock {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.program__image {
-  margin-bottom: 24.21px;
-}
-.program__image .icon {
-  width: 90px;
+.program img {
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 90px;
 }
 .program__subtitle {
   width: 100%;
@@ -605,18 +536,6 @@ body.lock {
   text-align: center;
   color: rgb(130, 130, 130);
   margin-bottom: 41.41px;
-}
-.program__stars {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .container-portfolio {
@@ -699,22 +618,9 @@ body.lock {
   text-decoration: underline;
 }
 .portfolio__content {
-  padding-top: 112.93px;
-  padding-bottom: 96.07px;
+  padding: 60px 0px;
   max-width: 943.461px;
   margin: 0 auto;
-}
-@media (max-width: 767.98px) {
-  .portfolio__content {
-    padding-top: 112.93px;
-    padding-bottom: 96.07px;
-  }
-}
-@media (max-width: 479.98px) {
-  .portfolio__content {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
 }
 .portfolio .portfolio-title {
   width: 100%;
@@ -827,7 +733,7 @@ body.lock {
   padding: 0px 30px 0px 30px;
 }
 .contacts__content {
-  padding-top: 114.24px;
+  padding-top: 60px;
   padding-bottom: 80px;
   max-width: 342.18px;
   margin: 0 auto;
@@ -835,13 +741,11 @@ body.lock {
 }
 @media (max-width: 767.98px) {
   .contacts__content {
-    padding-top: 100px;
     padding-bottom: 70px;
   }
 }
 @media (max-width: 479.98px) {
   .contacts__content {
-    padding-top: 60px;
     padding-bottom: 50px;
   }
 }
