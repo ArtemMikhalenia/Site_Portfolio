@@ -344,7 +344,11 @@ body.lock {
   margin: 0 auto;
 }
 .mainblock__content {
-  margin: 0px 5px 104.06px 5px;
+  margin: 0px 5px 50px 5px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  gap: 50px;
 }
 @media (max-width: 991.98px) {
   .mainblock__content {
@@ -353,32 +357,22 @@ body.lock {
 }
 .mainblock__text {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-bottom: 50px;
+  align-items: end;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
 }
 @media (max-width: 479.98px) {
   .mainblock__text {
     padding: 0px 30px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
     gap: 23px;
   }
 }
 .mainblock__image img {
+  max-width: 350px;
   width: 100%;
+  border-radius: 10px;
 }
 @media (max-width: 479.98px) {
   .mainblock__image {
@@ -405,14 +399,24 @@ body.lock {
   max-height: 100%;
 }
 .text-mainblock__name {
-  max-width: 160px;
   font-family: Gilroy-Bold;
-  font-size: 32px;
-  line-height: 28px;
+  font-size: 52px;
+  line-height: 58px;
+  text-align: right;
+  margin-bottom: 10px;
 }
 .text-mainblock__profession {
   font-family: Gilroy-Medium;
   font-size: 18px;
+  text-align: right;
+}
+
+.title {
+  font-family: Gilroy-Bold;
+  font-size: 34px;
+  line-height: 42px;
+  /* text-align: center; */
+  color: rgb(7, 7, 7);
 }
 
 .about__container {
@@ -425,7 +429,7 @@ body.lock {
   }
 }
 .about__content {
-  text-align: center;
+  text-align: justify;
   max-width: 485.34px;
   margin: 0 auto;
 }
@@ -445,13 +449,7 @@ body.lock {
   padding: 0px;
 }
 
-.title {
-  font-family: Gilroy-Bold;
-  font-size: 34px;
-  line-height: 42px;
-  text-align: center;
-  color: rgb(7, 7, 7);
-}
+
 
 .skills__container {
   max-width: 943.461px;
@@ -463,6 +461,7 @@ body.lock {
 }
 
 .skills__title {
+  text-align: center;
   margin-bottom: 69.1px;
 }
 @media (max-width: 479.98px) {
@@ -524,14 +523,14 @@ body.lock {
           flex-direction: column;
 }
 .program img {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   width: 100%;
   max-width: 90px;
 }
 .program__subtitle {
   width: 100%;
   font-family: Gilroy-Bold;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 17px;
   text-align: center;
   color: rgb(130, 130, 130);
