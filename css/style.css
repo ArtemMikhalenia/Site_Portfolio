@@ -158,7 +158,7 @@ body.lock {
   max-width: 943.61px;
   margin: 0 auto;
   width: 100%;
-  padding: 0px 5px 0px 5px;
+  padding: 0px 20px 0px 20px;
 }
 @media (max-width: 955.61px) {
   .container {
@@ -334,17 +334,8 @@ body.lock {
   color: #000;
 }
 
-@media (max-width: 479.98px) {
-  .mainblock {
-    margin-top: -45px;
-  }
-}
-.mainblock__container {
-  max-width: 943.61px;
-  margin: 0 auto;
-}
 .mainblock__content {
-  margin: 0px 5px 50px 5px;
+  margin: 0px 0px 50px 0px;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
@@ -353,6 +344,15 @@ body.lock {
 @media (max-width: 991.98px) {
   .mainblock__content {
     margin: 0px 5px 83px 5px;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 810px) {
+  .mainblock__content {
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 5px 0px 5px;
   }
 }
 .mainblock__text {
@@ -363,35 +363,26 @@ body.lock {
   justify-content: space-between;
   gap: 30px;
 }
-@media (max-width: 479.98px) {
+
+@media (max-width: 810px) {
   .mainblock__text {
-    padding: 0px 30px;
-    gap: 23px;
+    align-items:normal;
   }
 }
+
 .mainblock__image img {
   max-width: 350px;
   width: 100%;
   border-radius: 10px;
 }
-@media (max-width: 479.98px) {
+
+@media (max-width: 810px) {
   .mainblock__image {
-    display: none;
+    margin: 0 auto;
   }
-}
-.mainblock__image-mobile {
-  display: none;
-}
-.mainblock__image-mobile img {
-  width: 100%;
-}
-@media (max-width: 479.98px) {
-  .mainblock__image-mobile {
-    display: block;
-    padding: 0px 30px;
-  }
-  .mainblock__image-mobile img {
-    width: 100%;
+
+  .mainblock__image img {
+    max-width: 500px;
   }
 }
 
@@ -432,6 +423,12 @@ body.lock {
   text-align: justify;
   max-width: 485.34px;
   margin: 0 auto;
+}
+
+@media (max-width: 810px) {
+  .about__content {
+    margin: 0;
+  }
 }
 .about__title {
   margin-bottom: 17.69px;
@@ -490,18 +487,26 @@ body.lock {
   grid-template-columns: repeat(6, 1fr);
   gap: 70px;
 }
+
+@media (max-width: 1024px) {
+  .programs {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+  }
+}
+
 @media (max-width: 767.98px) {
   .programs {
     -ms-grid-columns: 1fr 60px 1fr;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 60px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
   }
 }
 @media (max-width: 479.98px) {
   .programs {
     -ms-grid-columns: 1fr;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 80px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 }
 
