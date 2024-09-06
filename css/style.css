@@ -721,7 +721,6 @@ body.lock {
   margin: 0px 0px 0px 0px;
 }
 .site-portfolio__image img {
-  border-radius: 10px;
   width: 100%;
 }
 .site-portfolio__link {
@@ -803,8 +802,8 @@ body.lock {
           justify-content: space-between;
   margin-bottom: 45.98px;
 }
-.contacts__social_items svg {
-  width: 40px;
+.contacts__social_items img {
+  width: 50px;
 }
 .contacts__social__text {
   margin: 0 auto;
