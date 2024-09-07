@@ -203,3 +203,28 @@ tabsBtn.forEach((item) => {
 
 document.querySelector(".tab_1-btn") &&
 	document.querySelector(".tab_1-btn").click();
+
+const swiper = new Swiper(".swiper", {
+	direction: "horizontal",
+	effect: "coverflow",
+	grabCursor: true,
+	centeredSlides: true,
+	slidesPerView: "3",
+	loop: true,
+	coverflowEffect: {
+		rotate: 50,
+		stretch: 0,
+		depth: 100,
+		modifier: 1,
+		slideShadows: false,
+	},
+
+	pagination: {
+		el: ".swiper-pagination",
+	},
+
+	// navigation: {
+	// 	nextEl: ".swiper-button-next",
+	// 	prevEl: ".swiper-button-prev",
+	// },
+});
