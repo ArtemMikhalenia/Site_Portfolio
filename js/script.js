@@ -204,27 +204,35 @@ tabsBtn.forEach((item) => {
 document.querySelector(".tab_1-btn") &&
 	document.querySelector(".tab_1-btn").click();
 
-const swiper = new Swiper(".swiper", {
-	direction: "horizontal",
-	effect: "coverflow",
-	grabCursor: true,
-	centeredSlides: true,
-	slidesPerView: "3",
-	loop: true,
-	coverflowEffect: {
-		rotate: 50,
-		stretch: 0,
-		depth: 100,
-		modifier: 1,
-		slideShadows: false,
-	},
+if (document.querySelector(".swiper")) {
+	const swiper = new Swiper(".swiper", {
+		direction: "horizontal",
+		effect: "coverflow",
+		grabCursor: true,
+		centeredSlides: true,
+		slidesPerView: "2",
+		loop: true,
+		spaceBetween: 50,
+		coverflowEffect: {
+			rotate: 30,
+			depth: 100,
+			modifier: 1,
+			slideShadows: true,
+		},
 
-	pagination: {
-		el: ".swiper-pagination",
-	},
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+			dynamicBullets: true,
+		},
 
-	// navigation: {
-	// 	nextEl: ".swiper-button-next",
-	// 	prevEl: ".swiper-button-prev",
-	// },
-});
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+			},
+			768: {
+				slidesPerView: 2,
+			},
+		},
+	});
+}
