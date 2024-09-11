@@ -1,3 +1,5 @@
+import { skillsData } from "./data.js";
+
 //BURGER
 let iconMenu = document.querySelector(".header__burger");
 let body = document.querySelector("body");
@@ -96,6 +98,8 @@ tabsBtn.forEach((item) => {
 document.querySelector(".tab_1-btn") &&
 	document.querySelector(".tab_1-btn").click();
 
+//SWIPER
+
 if (document.querySelector(".swiper")) {
 	const swiper = new Swiper(".swiper", {
 		direction: "horizontal",
@@ -127,4 +131,28 @@ if (document.querySelector(".swiper")) {
 			},
 		},
 	});
+}
+
+//RENDER ITEMS
+const skillsBlock = document.querySelector(".programs");
+
+const Skill = {
+	render: (img, alt, title) => {
+		return `<div class="program animate__animated wow animate__zoomIn">
+    <img src="${img}" alt="${alt}">
+    <p class="program__subtitle">${title}</p>
+  </div>`;
+	},
+};
+
+if (skillsBlock) {
+	for (let key in skillsData) {
+		const skillsKey = skillsData[key];
+
+		skillsBlock.innerHTML += Skill.render(
+			skillsKey.img,
+			skillsKey.alt,
+			skillsKey.title
+		);
+	}
 }
