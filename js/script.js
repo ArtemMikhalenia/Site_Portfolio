@@ -1,4 +1,9 @@
-import { skillsData } from "./data.js";
+import {
+	skillsData,
+	portfolioSitesData,
+	portfolioWebappsData,
+	portfolioWebappsReactData,
+} from "./data.js";
 
 //BURGER
 let iconMenu = document.querySelector(".header__burger");
@@ -115,7 +120,10 @@ if (document.querySelector(".swiper")) {
 			modifier: 1,
 			slideShadows: true,
 		},
-
+		autoplay: {
+			delay: 2500,
+			disableOnInteraction: true,
+		},
 		pagination: {
 			el: ".swiper-pagination",
 			clickable: true,
@@ -135,12 +143,25 @@ if (document.querySelector(".swiper")) {
 
 //RENDER ITEMS
 const skillsBlock = document.querySelector(".programs");
+const portfolioTab1 = document.querySelector("#tab_1");
+const portfolioTab2 = document.querySelector("#tab_2");
+const portfolioTab3 = document.querySelector("#tab_3");
 
 const Skill = {
 	render: (img, alt, title) => {
 		return `<div class="program animate__animated wow animate__zoomIn">
     <img src="${img}" alt="${alt}">
     <p class="program__subtitle">${title}</p>
+  </div>`;
+	},
+};
+
+const PortfolioItem = {
+	render: (link, img, alt, title) => {
+		return `<div class="portfolio__site site-portfolio animate__animated wow animate__zoomIn">
+    <a href="${link}" target="_blank"
+      class="site-portfolio__image"><img src="${img}"
+        alt="${alt} site image"><span class="site-portfolio__link">Click to visit ${title}</span></a>
   </div>`;
 	},
 };
@@ -153,6 +174,45 @@ if (skillsBlock) {
 			skillsKey.img,
 			skillsKey.alt,
 			skillsKey.title
+		);
+	}
+}
+
+if (portfolioTab1) {
+	for (let key in portfolioSitesData) {
+		const portfolioKey = portfolioSitesData[key];
+
+		portfolioTab1.innerHTML += PortfolioItem.render(
+			portfolioKey.link,
+			portfolioKey.img,
+			portfolioKey.alt,
+			portfolioKey.title
+		);
+	}
+}
+
+if (portfolioTab2) {
+	for (let key in portfolioWebappsData) {
+		const portfolioKey = portfolioWebappsData[key];
+
+		portfolioTab2.innerHTML += PortfolioItem.render(
+			portfolioKey.link,
+			portfolioKey.img,
+			portfolioKey.alt,
+			portfolioKey.title
+		);
+	}
+}
+
+if (portfolioTab3) {
+	for (let key in portfolioWebappsReactData) {
+		const portfolioKey = portfolioWebappsReactData[key];
+
+		portfolioTab3.innerHTML += PortfolioItem.render(
+			portfolioKey.link,
+			portfolioKey.img,
+			portfolioKey.alt,
+			portfolioKey.title
 		);
 	}
 }
