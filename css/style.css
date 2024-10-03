@@ -920,7 +920,8 @@ transition: all 0.5s ease 0s;
 display: grid;
 }
 
-.portfolio__webapps.portfolio__tab.active{
+.portfolio__webapps.portfolio__tab.active,
+.portfolio__webappsreact.portfolio__tab.active{
   display: grid;
   row-gap: 40px;
   }

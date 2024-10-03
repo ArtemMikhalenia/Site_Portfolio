@@ -216,4 +216,16 @@ export const portfolioWebappsReactData = [
 		alt: "Swoosh store",
 		title: "Swoosh store",
 	},
+	{
+		link: "https://air-experience-react-clone.netlify.app/",
+		img: "./img/Portfolio/webappsreact/airbnb_clone.png",
+		alt: "AirBnb experiences clone",
+		title: "AirBnb experiences clone",
+	},
+	{
+		link: "https://digital-business-card-react-jsx.netlify.app/",
+		img: "./img/Portfolio/webappsreact/digital_business_card.png",
+		alt: "Digital business card",
+		title: "Digital business card",
+	},
 ];
