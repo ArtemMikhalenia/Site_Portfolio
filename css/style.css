@@ -637,14 +637,7 @@ body.lock {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.portfolio__sites {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-  grid-template-columns: 1fr;
-  row-gap: 40px;
-  margin: 0px 0px 40px 0px;
-}
+
 .portfolio__site {
   height: 100%;
   display: -webkit-box;
@@ -654,34 +647,13 @@ body.lock {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
 }
 .portfolio__site a {
   cursor: pointer;
   -webkit-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
-}
-
-.portfolio-page__sites {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
-  -webkit-column-gap: 20px;
-     -moz-column-gap: 20px;
-          column-gap: 20px;
-  row-gap: 20px;
-}
-@media (max-width: 767.98px) {
-  .portfolio-page__sites {
-    -ms-grid-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media (max-width: 479.98px) {
-  .portfolio-page__sites {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-  }
 }
 
 .portfolio__btn {
@@ -829,10 +801,6 @@ body.lock {
   color: rgb(130, 130, 130);
 }
 
-/* .button__contacts {
-  margin: 30px 0px 85.78px 0px;
-} */
-
 .social:hover {
   -webkit-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
@@ -916,14 +884,30 @@ transition: all 0.5s ease 0s;
   display: block;
 }
 
-.portfolio__sites.portfolio__tab.portfolio-page__sites.active{
-display: grid;
-}
-
+.portfolio__sites.portfolio__tab.active,
 .portfolio__webapps.portfolio__tab.active,
 .portfolio__webappsreact.portfolio__tab.active{
   display: grid;
-  row-gap: 40px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(1fr, 1fr));
+  grid-auto-rows: 195px;
+  gap: 20px;
+  }
+
+  @media (max-width: 767.98px) {
+    .portfolio__sites.portfolio__tab.active,
+    .portfolio__webapps.portfolio__tab.active,
+    .portfolio__webappsreact.portfolio__tab.active{
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 479.98px) {
+    .portfolio__sites.portfolio__tab.active,
+    .portfolio__webapps.portfolio__tab.active,
+    .portfolio__webappsreact.portfolio__tab.active{
+      grid-template-columns: 1fr;
+    }
   }
 
 .tab-buttons{
