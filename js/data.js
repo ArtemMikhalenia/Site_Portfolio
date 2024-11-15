@@ -211,6 +211,12 @@ export const portfolioWebappsData = [
 ];
 export const portfolioWebappsReactData = [
 	{
+		link: "https://weather-app5834.netlify.app/",
+		img: "./img/Portfolio/webappsreact/weather_app.png",
+		alt: "Weather App",
+		title: "Weather App",
+	},
+	{
 		link: "https://swoosh-store.netlify.app/",
 		img: "./img/Portfolio/webappsreact/swoosh_store.png",
 		alt: "Swoosh store",
