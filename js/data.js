@@ -197,16 +197,22 @@ export const portfolioWebappsData = [
 		title: "Personal Trainer",
 	},
 	{
-		link: "https://rolling-scopes-school.github.io/artemmikhalenia-JSFE2023Q4/hangman/",
-		img: "./img/Portfolio/webapps/hangman.png",
-		alt: "Hangman",
-		title: "Hangman",
-	},
-	{
 		link: "https://rolling-scopes-school.github.io/artemmikhalenia-JSFE2023Q4/nonograms/",
 		img: "./img/Portfolio/webapps/nonograms.png",
 		alt: "Nonograms",
 		title: "Nonograms",
+	},
+	{
+		link: "https://rolling-scopes-school.github.io/artemmikhalenia-JSFE2023Q4/rss-puzzle/",
+		img: "./img/Portfolio/webapps/rss_puzzle.png",
+		alt: "RSS Puzzle",
+		title: "RSS Puzzle",
+	},
+	{
+		link: "https://rolling-scopes-school.github.io/artemmikhalenia-JSFE2023Q4/hangman/",
+		img: "./img/Portfolio/webapps/hangman.png",
+		alt: "Hangman",
+		title: "Hangman",
 	},
 ];
 export const portfolioWebappsReactData = [
